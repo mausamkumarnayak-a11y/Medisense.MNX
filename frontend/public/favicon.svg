@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+  <rect width="48" height="48" rx="12" fill="url(#messpulse_olive)" />
+  <path d="M24 11v26M11 24h26" stroke="#8DC4A2" stroke-width="4.5" stroke-linecap="round" opacity="0.35" />
+  <path d="M34 23c1.6-1.5 3.3-3.3 3.3-5.7 0-4.4-3.6-7.3-8-7.3-3.4 0-5.3 1.9-5.3 1.9s-1.9-1.9-5.3-1.9c-4.4 0-8 2.9-8 7.3 0 2.4 1.7 4.2 3.3 5.7l10 10.7 10-10.7z" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M15 21h5l2.5-4 3 8 2.5-4h5" stroke="#34D399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+  <defs>
+    <linearGradient id="messpulse_olive" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3D6C4F" />
+      <stop offset="1" stop-color="#1B3123" />
+    </linearGradient>
+  </defs>
+</svg>

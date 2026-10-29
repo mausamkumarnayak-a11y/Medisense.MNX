@@ -1,0 +1,132 @@
+/* =====================================================================
+   MEDISENSE CLINICAL DASHBOARD DESIGN SYSTEM
+   - Primary Palette: Blue / Indigo (#4f46e5 and #3b5bdb)
+   - Canvas Background: Pale Lavender (#eef1fb)
+   - Cards: White (#ffffff) with 16px border-radius and soft shadows
+   - Typography: Clean Google Fonts ('Outfit' & 'Plus Jakarta Sans')
+   ===================================================================== */
+
+:root {
+  /* Brand Indigo / Blue Colors */
+  --primary-indigo: #4f46e5;
+  --primary-blue: #3b5bdb;
+  --primary-gradient: linear-gradient(135deg, #4f46e5 0%, #3b5bdb 100%);
+  --primary-hover: #4338ca;
+  --primary-active: #3730a3;
+  --primary-light: #e0e7ff;
+  --primary-subtle: rgba(79, 70, 229, 0.08);
+
+  /* Surfaces & Backgrounds */
+  --bg-lavender: #eef1fb;
+  --card-white: #ffffff;
+  --border-subtle: #e2e8f0;
+  --border-card: rgba(226, 232, 240, 0.85);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+  --shadow-card: 0 4px 20px -2px rgba(79, 70, 229, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+  --shadow-card-hover: 0 10px 25px -4px rgba(79, 70, 229, 0.12), 0 4px 10px -2px rgba(0, 0, 0, 0.05);
+  --shadow-primary: 0 6px 18px -3px rgba(79, 70, 229, 0.35);
+
+  /* Typography Colors */
+  --text-dark: #0f172a;
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+  --text-inverse: #ffffff;
+
+  /* Font Families */
+  --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Geometry */
+  --radius-card: 16px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-pill: 9999px;
+
+  /* Semantic Urgency Colors */
+  --urgency-green-bg: #ecfdf5;
+  --urgency-green-border: #a7f3d0;
+  --urgency-green-text: #065f46;
+  --urgency-green-badge: #10b981;
+
+  --urgency-amber-bg: #fffbeb;
+  --urgency-amber-border: #fde68a;
+  --urgency-amber-text: #92400e;
+  --urgency-amber-badge: #f59e0b;
+
+  --urgency-red-bg: #fef2f2;
+  --urgency-red-border: #fecaca;
+  --urgency-red-text: #991b1b;
+  --urgency-red-badge: #ef4444;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  background-color: var(--bg-lavender);
+  color: var(--text-primary);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: all 0.2s ease;
+}
+
+input, textarea, select {
+  font-family: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--text-dark);
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: var(--primary-indigo);
+  text-decoration: none;
+}
+
+/* Custom Scrollbar for smooth modern look */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

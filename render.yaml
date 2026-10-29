@@ -1,0 +1,44 @@
+# Render Infrastructure as Code (Blueprint)
+# https://render.com/docs/blueprint-spec
+
+services:
+  # ==========================================
+  # OPTION 1 (DEFAULT): Dedicated Backend Service
+  # ==========================================
+  - type: web
+    name: medisense-backend
+    runtime: python
+    plan: free
+    region: oregon
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: OLLAMA_URL
+        value: http://localhost:11434/api/generate
+      - key: MODEL
+        value: qwen3:8b
+      # For cloud AI on Render free tier, add GROQ_API_KEY or OPENAI_API_KEY in Render Dashboard
+      - key: GROQ_API_KEY
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+
+  # ==========================================
+  # Frontend Static Site
+  # ==========================================
+  - type: static
+    name: medisense-frontend
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: ./frontend/dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          type: web
+          name: medisense-backend
+          property: host
